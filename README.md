@@ -1,4 +1,4 @@
-#  MSGF-IDENTITY-SERVICE
+#  Keycloak-Spring-Boot
 
 This repository implements the **keycloak** technology in its version 22.0.3 together with an application Spring Boot 3.1.7 for the authentication and authorization related to the management of domains (realm), roles and users that the service provides. Both the keycloak schema and the information generated from its operation are stored in a PosgreSQL database.
 
