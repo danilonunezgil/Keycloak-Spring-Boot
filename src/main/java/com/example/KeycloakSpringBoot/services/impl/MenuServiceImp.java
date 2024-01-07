@@ -7,9 +7,12 @@ import com.example.KeycloakSpringBoot.repository.MenuRepository;
 import com.example.KeycloakSpringBoot.services.IMenuItemService;
 import com.example.KeycloakSpringBoot.services.IMenuService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
+@Service
 @RequiredArgsConstructor
 public class MenuServiceImp implements IMenuService, IMenuItemService {
 
@@ -21,7 +24,23 @@ public class MenuServiceImp implements IMenuService, IMenuItemService {
     }
 
     @Override
+    public void createMenu(Menu menu) {
+        this.menuRepository.save(menu);
+    }
+
+    @Override
     public List<MenuItem> findAllByMenuId(Long id) {
         return this.menuItemRepository.findAllByMenuId(id);
+    }
+
+    @Override
+    public void createMenuItem(MenuItem menuItem) {
+        this.menuItemRepository.save(menuItem);
+    }
+
+
+    @Override
+    public Optional<MenuItem> findById(Long itemId) {
+        return this.menuItemRepository.findById(itemId);
     }
 }

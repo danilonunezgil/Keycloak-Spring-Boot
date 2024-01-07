@@ -4,9 +4,11 @@ import com.example.KeycloakSpringBoot.model.Restaurant;
 import com.example.KeycloakSpringBoot.repository.RestaurantRepository;
 import com.example.KeycloakSpringBoot.services.IRestaurantService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @RequiredArgsConstructor
 public class RestaurantServiceImpl implements IRestaurantService {
 

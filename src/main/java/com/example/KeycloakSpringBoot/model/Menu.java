@@ -1,9 +1,6 @@
 package com.example.KeycloakSpringBoot.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Transient;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -12,7 +9,7 @@ import java.util.List;
 @Data
 public class Menu {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
     private Long restaurantId;
     private Boolean active;
