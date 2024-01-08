@@ -34,7 +34,7 @@ public class OrderController {
     }
 
     //Authenticated users can access
-    @PostMapping()
+    @PostMapping("/create")
     public Order createOrder(@RequestBody Order order){
         this.iOrderService.createOrder(order);
         List<OrderItem> orderItems = order.getOrderItemList();
